@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.sistemacrediticio.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_solicitarPrestamo"
+            app:destination="@id/solicitarPrestamo" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.sistemacrediticio.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/solicitarPrestamo"
+        android:name="com.example.sistemacrediticio.SolicitarPrestamo"
+        android:label="fragment_solicitar_prestamo"
+        tools:layout="@layout/fragment_solicitar_prestamo" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.sistemacrediticio.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_crearUsuarioFragment"
+            app:destination="@id/crearUsuarioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearUsuarioFragment"
+        android:name="com.example.sistemacrediticio.CrearUsuarioFragment"
+        android:label="fragment_crear_usuario"
+        tools:layout="@layout/fragment_crear_usuario" />
+</navigation>

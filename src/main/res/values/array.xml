@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="lista_fuente_ingreso" >
+        <item>Nómina</item>
+        <item>Independiente</item>
+    </string-array>
+    <string-array name="lista_plazo_a_pagar">
+        <item>12 meses</item>
+        <item>24 meses</item>
+    </string-array>
+</resources>
